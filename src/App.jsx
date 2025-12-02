@@ -23,61 +23,76 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Simple Form</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
+    <div className="app-container">
+      <div className="form-wrapper">
+        <h1 className="form-title">Simple Form</h1>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="form-group">
+            <label className="form-label">Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="form-input"
+              placeholder="Enter your name"
+            />
+          </div>
 
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label className="form-label">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="form-input"
+              placeholder="Enter your email"
+            />
+          </div>
 
-        <div>
-          <label>Phone:</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label className="form-label">Phone:</label>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="form-input"
+              placeholder="Enter your phone"
+            />
+          </div>
 
-        <div>
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label className="form-label">Message:</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="form-textarea"
+              placeholder="Enter your message"
+              rows="5"
+            />
+          </div>
 
-        <div>
-          <label>Country:</label>
-          <input
-            type="text"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label className="form-label">Country:</label>
+            <input
+              type="text"
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              className="form-input"
+              placeholder="Enter your country"
+            />
+          </div>
 
-        <button type="submit">Submit</button>
-      </form>
-    </>
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
 
