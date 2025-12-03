@@ -1,3 +1,8 @@
+// src/App.jsx
+// A React component that implements a simple form with detailed console logging
+// for various user interactions and form submission events.
+// This includes logging for field changes, focus/blur events, and submission details.
+
 import { useState, useEffect } from "react";
 import "./App.css";
 
